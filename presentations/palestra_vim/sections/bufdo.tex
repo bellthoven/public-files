@@ -1,0 +1,44 @@
+\section{Operações em massa}
+\begin{frame}{Operações em massa}
+\begin{block}{Comandos}
+	\begin{alert}{:bufdo cmd}
+		Executa um comando em todos os buffers abertos (:e) \\
+	\end{alert}
+	:bfirst \\
+	:cmd \\
+	:bnext \\
+	:cmd \\
+	... \\
+	\begin{alert}{:tabdo cmd}
+		Executa um comandos em todas as abas abertas (:tabnew)\\
+	\end{alert}
+	:tabfirst \\
+	:cmd \\
+	:tabnext \\
+	:cmd \\
+	... \\
+\end{block}
+\end{frame}
+\begin{frame}{Operações em massa}
+\begin{block}{Comandos}
+	\begin{alert}{:windo cmd}
+		Executa um comandos em todas as janelas abertas (:[v]split)\\
+	\end{alert}
+	CTRL-w t \\
+	:cmd \\ 
+	CTRL-w w \\
+	:cmd \\
+	... \\
+\end{block}
+\end{frame}
+\subsection{Exemplos}
+\begin{frame}{Exemplos}
+	\begin{itemize}
+		\item :bufdo :\%s/\$variavel\_velha/\$variavel\_nova/g
+		\item :bufdo :\%g/\textasciicircum\$/d
+		\item :bufdo :\%g/\textasciicircum\#/d
+		\item :tabdo :set fileencoding=utf-8 \textbar :w
+		\item :bufdo :0r header.file
+		\item :windo :syntax on \textbar :set syntax=tex
+	\end{itemize}
+\end{frame}

@@ -1,0 +1,38 @@
+\section{Templates}
+\begin{frame}{Templates}
+	\begin{block}{Funcionalidade}
+		Permite que, ao abrir um novo arquivo, o arquivo tenha um template padrão
+		\begin{itemize}
+			\item Acelerando o desenvolvimento
+			\item Certificando-se de que não será esquecido de nada
+			\item Menos erros de digitação
+			\item Evita o raciocínio e a memorização sobre coisas desnecessárias
+			\item Padroniza documentos
+		\end{itemize}
+	\end{block}
+	\begin{block}{Utilidade}
+		\begin{itemize}
+			\item Criar template para uma extensão de arquivo
+			\item Criar template para um arquivo que contenha uma certa palavra
+			\item Criar template para um arquivo que esteja dentro de um certo diretório
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\subsection{Exemplos}
+\begin{frame}{Exemplos}
+	\begin{enumerate}
+		\item Criar o arquivo bash.template com o template desejado
+		\item Colocar no .vimrc o código para carregar o template para todos os arquivos com extensão .sh
+		\item Sentir a magia
+	\end{enumerate}
+	\begin{block}{bash.template}
+		\#!/bin/bash
+	\end{block}
+	\begin{block}{.vimrc}
+		autocmd BufNewFile *.sh 0r bash.template
+	\end{block}
+	\begin{block}{Shell}
+		\$ vim teste.sh
+	\end{block}
+\end{frame}

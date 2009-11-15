@@ -1,0 +1,27 @@
+\section{Sessions}
+\begin{frame}{Sessions}
+	Imagine que você está em casa programando. Chega sua namorada e diz: "amor, desliga esse computador e vamos pro quarto". O que fazer?\\
+	\pause \large Respostas:
+	\begin{enumerate}
+		\item Desliga o computador pressionando o botão pra ir mais rápido, mais tarde é só reabrir os arquivos e lembrar de onde parou
+		\pause \item Diz pra ela que agora não pode, pois tem 10 arquivos abertos, 1 diff e está no meio de um algoritmo complexo
+		\pause \item Finge que não escutou nada
+		\pause \item Desliga o monitor e reza pra que ninguém mais mexa no computador
+		\pause \item Salva a sessão e continua da onde parou quando quiser
+	\end{enumerate}
+\end{frame}
+\begin{frame}{Sessions}
+	Sempre que se abre o vim, se inicia uma nova sessão. E nela são gravados:
+	\begin{itemize}
+		\item Hitórico de comandos
+		\item Históricos de \textit{undos}
+		\item Arquivos abertos em buffers
+		\item Arquivos abertos em abas
+		\item Mapeamento de teclas
+		\item Abreviaturas\ldots
+	\end{itemize}
+	\begin{block}{Como usar?}
+		:mksession sessions/algoritmo\_X.vim \\
+		\$ vim -S sessions/algoritmo\_X.vim
+	\end{block}
+\end{frame}

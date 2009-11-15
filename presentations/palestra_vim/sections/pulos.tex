@@ -1,0 +1,46 @@
+\section{Pulos}
+\begin{frame}{Pulos}
+	\begin{description}
+		\item[gg] Primeira linha do arquivo
+		\pause \item[G] Última do arquivo 
+		\pause \item[\textasciicircum] Primeiro caracter não nulo
+		\pause \item[\$] Último caracter não nulo
+		\pause \item[b] Primeiro caracter da palavra acima do cursor
+		\pause \item[e] Última caracter da palavra acima do cursor
+		\pause \item[fx] Primeira incidência depois do cursor de \textit{x} na linha
+		\pause \item[Fx] Primeira incidência anterior ao cursor de \textit{x} na linha
+	\end{description}
+\end{frame}
+\begin{frame}{Pulos por Marcas}
+\begin{block}{Quando usar?}
+	\begin{itemize}
+		\item Quando se é difícil encontrar algum trecho específico do arquivo
+		\item Quando se precisa apenas um trecho de vários arquivos pra se escrever um outro
+		\item Quando o arquivo é muito longo e precisa ser scrollado
+		\item \textless{}Insira aqui a sua utilidade\textgreater
+	\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}{Pulos por Marcas}
+\begin{block}{Como usar?}
+	\begin{description}
+		\item[ma] Marca a letra \textit{a} neste ponto.
+		\begin{itemize}
+			\item Marca a linha cujo cursor está em cima.
+			\item Pode-se utilizar qualquer uma das 26 letras.
+			\item São 26 letras por arquivo aberto.
+			\item Devem ser em minúsculas.
+		\end{itemize}
+		\item[mA] Marca a letra \textit{A} neste ponto.
+		\begin{itemize}
+			\item Marca a linha cujo cursor está em cima.
+			\item Pode-se utiilziar qualquer uma das 26 letras.
+			\item São 26 letras por sessão.
+			\item Devem ser em minúsculas.
+			\item São visíveis de qualquer arquivo
+		\end{itemize}
+		\item['a] Pula para a marca \textit{a} (mesmo arquivo)
+		\item['A] Pula para a marca \textit{A} (mesma sessão)
+	\end{description}
+\end{block}
+\end{frame}

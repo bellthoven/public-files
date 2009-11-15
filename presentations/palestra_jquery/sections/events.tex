@@ -1,0 +1,34 @@
+\section{Eventos}
+\begin{frame}{Eventos}
+\begin{itemize}
+	\pause\item \$(...).click() - \$(...).click(function() \{ \})
+	\pause\item \$(...).dblclick() - \$(...).dblclick(function() \{ \})
+	\pause\item \$(...).blur() - \$(...).blur(function() \{ \})
+	\pause\item \$(...).change() - \$(...).change(function() \{ \})
+	\pause\item \$(...).keypress() - \$(...).keypress(function() \{ \})
+	\pause\item \$(...).keyup() - \$(...).keyup(function() \{ \})
+	\pause\item \$(...).hover(function() \{ \},function() \{ \})
+\end{itemize}
+\end{frame}
+\begin{frame}{Eventos}
+\begin{block}{\$(...).bind()}
+\begin{itemize}
+	\item \$(...).bind('blur', function() \{ \})
+	\item \$(...).bind('meuEvento', function() \{ \})
+\end{itemize}
+\end{block}
+
+\pause \begin{block}{\$(...).trigger()}
+\begin{itemize}
+	\item \$(...).trigger('blur')
+	\item \$(...).trigger('meuEvento')
+\end{itemize}
+\end{block}
+
+\pause \begin{block}{\$(...).triggerHandler()}
+\begin{itemize}
+	\item \$(...).triggerHandler('blur')
+	\item \$(...).triggerHandler('change')
+\end{itemize}
+\end{block}
+\end{frame}

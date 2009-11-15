@@ -1,0 +1,81 @@
+\defverbatim[colored]\inputfail{%
+\begin{lstlisting}[language=Html]
+<input type="text" name="initdate"
+	onchange="validateDate(this);" />
+
+
+<input type="text" name="enddate"
+	onchange="validateDate(this);" />
+\end{lstlisting}}%
+
+\defverbatim[colored]\inputok{%
+\begin{lstlisting}[language=Html]
+<input type="text" name="initdate"
+	class="date" />
+
+
+<input type="text" name="enddate"
+	class="date" />
+\end{lstlisting}}%
+
+\defverbatim[colored]\inputjs{%
+\begin{lstlisting}[language=Java]
+window.onload = function(){
+    inputs = document.getElementsByTagName('input');
+    for(var i=0,l=inputs.length;i<l;i++){ 
+        if(inputs[i].className
+			&& inputs[i].className=='date'){ 
+            input.onchange = function(){ 
+                validateDate(this);
+            }
+        }
+    }
+}; 
+function validateDate(element) { }
+\end{lstlisting}}%
+
+\section{Javascript Não-Obstrusivo}
+\begin{frame}{Javascript Não-Obstrusivo}
+\inputfail
+\begin{itemize}
+	\pause \item E se não estiver com javascript habilitado?
+	\pause \item E se o nome da função javascript mudar?
+	\pause \item E se for necessário adicionar um novo parâmetro?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Javascript Não-Obstrusivo}
+\inputok
+\begin{itemize}
+	\pause \item E se o HTML apenas avisar "este campo contém uma data" ?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Javascript Não-Obstrusivo}
+\inputjs
+\end{frame}
+
+\begin{frame}{Javascript Não-Obstrusivo}
+\begin{itemize}
+	\item Qualquer input com a classe "date" será validado
+	\item Fácil manutenção com códigos mais limpos
+	\item Separação das camadas (apresentação, conteúdo e interação)
+	\item Com javascript desabilitado, não há validação, mas também não há erros
+\end{itemize}
+\begin{description}
+	\item[HTML] Responsável somente pelo conteúdo
+	\item[CSS] Responsável pela apresentação
+	\item[Javascript] Responsável pela interação com o usuário
+\end{description}
+\end{frame}
+
+\begin{frame}{Javascript Não-Obstrusivo}
+\begin{itemize}
+	\item Melhores práticas para resolver os típicos problemas cross-browsers como progressive enhancement/graceful degradation
+	\item Não suponha que o JavaScript estará habilitado, otimize seu código para não ficar dependente dele;
+	\item Não suponha que os browsers interpretarão corretamente determinados métodos e propriedades, teste individualmente em cada browser antes de publicar;
+	\item Não suponha que o código HTML estará correto, verifique-o e não faça nada até que ele esteja devidamente estruturado;
+	\item Mantenha a funcionalidade independente do dispositivo do qual seu site é acessado;
+	\item Suponha que outros scripts tentarão interferir com o seu e mantenha o seu script o mais seguro possível.
+\end{itemize}
+\end{frame}
